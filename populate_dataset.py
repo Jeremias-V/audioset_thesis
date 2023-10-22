@@ -56,14 +56,14 @@ for folder_name in os.listdir(source_directory):
         for file in test_files:
             source_path = os.path.join(source_directory, folder_name, file)
             destination_path = os.path.join(destination_directory, "test_30", getOutputDirectory(class_name), class_name + '_' + file)
-            shutil.copy(source_path, destination_path)
+            shutil.copyfile(source_path, destination_path)
         
         print(f'Finished copying the test files for {class_name}.')
 
         for file in train_files:
             source_path = os.path.join(source_directory, folder_name, file)
             destination_path = os.path.join(destination_directory, "train_70", getOutputDirectory(class_name), class_name + '_' + file)
-            shutil.copy(source_path, destination_path)
+            shutil.copyfile(source_path, destination_path)
 
         print(f'Finished copying the train files for {class_name}.')
     
